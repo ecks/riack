@@ -270,6 +270,22 @@ struct RIACK_STRING_LINKED_LIST* riack_string_linked_list_add(struct RIACK_CLIEN
 	return current;
 }
 
+size_t riack_string_linked_list_size(struct RIACK_STRING_LINKED_LIST ** strings)
+{
+  struct RIACK_STRING_LINKED_LIST * current, * next;
+  size_t size;
+
+  size = 0;
+  current = *strings;
+  while(current != 0)
+  { 
+    size++;
+    current = current->next;
+  }
+
+  return size;
+}
+
 void riack_mapred_add_to_chain(struct RIACK_CLIENT *client,
         struct RIACK_MAPRED_RESPONSE_LIST** base,
         struct RIACK_MAPRED_RESPONSE_LIST* mapred_new)
