@@ -53,10 +53,7 @@ RIACK_EXPORT int riack_ping(riack_client *client);
 RIACK_EXPORT int riack_list_buckets_ext(riack_client *client, riack_string* bucket_type,
         riack_string_list** bucket_list, uint32_t timeout);
 
-RIACK_EXPORT size_t riack_string_linked_list_size(struct riack_string_linked_list ** strings);
-
-RIACK_EXPORT int riack_stream_keys(struct riack_client *client, riack_string bucket,
-								   void(*callback)(struct riack_client*, void*, riack_string), void* callback_arg);
+RIACK_EXPORT size_t riack_string_linked_list_size(riack_string_linked_list ** strings);
 
 RIACK_EXPORT int riack_list_buckets(riack_client *client, riack_string_list** bucket_list);
 

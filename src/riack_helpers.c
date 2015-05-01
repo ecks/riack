@@ -316,9 +316,9 @@ riack_string_linked_list* riack_string_linked_list_add(riack_client *client,
 	return current;
 }
 
-size_t riack_string_linked_list_size(struct riack_string_linked_list ** strings)
+size_t riack_string_linked_list_size(riack_string_linked_list ** strings)
 {
-  struct riack_string_linked_list * current, * next;
+  riack_string_linked_list * current, * next;
   size_t size;
 
   size = 0;
